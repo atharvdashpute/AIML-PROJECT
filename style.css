@@ -48,12 +48,15 @@ a:hover{
 }
 .banner-card{
     position: relative;
+    font-size: 1.6rem;
+    text-align: center;
 }
 
 .banner-card img{
     background-size: cover;
     max-width: 100% ;
     height: min-content;
+    
 }
 
 .banner-text{
@@ -68,4 +71,260 @@ a:hover{
     text-transform: uppercase;
     font-weight: bolder;
     margin-bottom: 5px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    background: #fff;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Header Section */
+.header h1 {
+    font-size: 3.0rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.header p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.feature {
+    flex: 1;
+    min-width: 250px;
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.feature input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+    
+    }
+}
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f9f9f9;
+}
+
+/* About Section Styling */
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    
+    gap: px;
+}
+
+/* Text Content */
+.text-content {
+    flex: 2;
+    padding-right: 20px;
+    justify-items: center;
+}
+
+.text-content h2 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.text-content p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+    padding: 30px;
+}
+
+/* Image Content */
+.image-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.image-content img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-top {
+    object-fit: cover;
+}
+
+.image-bottom {
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: px) {
+    .about-section {
+        flex-direction: column;
+    }
+
+    .text-content {
+        padding-right: 0;
+    }
+}
+.contact-section {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    background: url('img/page-background.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+    .contact-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        z-index: 1;
+    }
+
+    .content {
+        position: relative;
+        z-index: 2;
+        line-height: 2rem;
+    }
+
+    .content h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        line-height: 6%;
+    }
+
+    
+.icon {
+    cursor: pointer;
+    height: 2rem;
+
+}
+.icon:hover{
+    opacity: 0.7;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Courses Section */
+.courses-section {
+    width: 90%;
+
+    text-align: center;
+}
+
+.courses-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Courses Container */
+.courses-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Course Card */
+.course-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    
+    width: 22%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.course-card h3 {
+    font-size: 1.2rem;
+    margin: 15px 10px 10px;
+    color: #333;
+}
+
+.course-card p {
+    margin: 5px 10px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.course-card .price {
+    color: green;
+    font-weight: bold;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }

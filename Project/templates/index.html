@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Career Guidance System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>AI-Enhanced Career Guidance System</h1>
+    </header>
+
+    <main>
+        <section id="user-input">
+            <h2>Personalized Career Advice</h2>
+            <form id="career-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" placeholder="Enter your age" required>
+
+                <label for="skills">Key Skills:</label>
+                <textarea id="skills" name="skills" placeholder="List your skills (e.g., programming, designing, etc.)" required></textarea>
+
+                <label for="interests">Interests:</label>
+                <textarea id="interests" name="interests" placeholder="What are your interests?" required></textarea>
+
+                <button type="submit">Get Career Advice</button>
+            </form>
+        </section>
+
+        <section id="output">
+            <h2>Suggested Careers</h2>
+            <div id="suggestions">
+                <!-- Suggestions will appear here dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AI Career Guidance System</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
