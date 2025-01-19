@@ -46,10 +46,6 @@ a:hover{
     background: #1b9bff;
     transition: .5s;
 }
-    background: url(img/bg.jpg) no-repeat;
-    background-size: cover;
-    height: calc(80vh - 80px);
-
 .banner-card{
     position: relative;
 }
