@@ -8,12 +8,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
+    
     <nav>
         <label class="logo">CodeZilla.Guidance</label>
         <ul>
             <li><a href="#Home">Home </a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="#contact">contact</a></li>
             <li><a href="login/login.html">Registration </a></li>
             <li><a href="#"> Login</a></li>
@@ -21,11 +22,83 @@
 
         </ul>
         <hr>
+        <button class="chatbot-button" onclick="toggleChat()">💬</button>
+        <div class="chat-container" id="chatbox">
+        <div class="chat-header">Chatbot</div>
+        <div class="chat-body" id="chat-body"></div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .chatbot-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .chat-container {
+            display: none;
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .chat-header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .chat-body {
+            height: 300px;
+            overflow-y: auto;
+            padding: 10px;
+        }
+        .chat-input {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+        .chat-input input {
+            flex: 1;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .chat-input button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+    </style>
         <div class="banner-card">
+            
             <img src="img/bg.jpg">
             <div class="banner-text">
                 <h4>CodeZilla Career Guidance System</h4>
                 <p>Come here and Discover yourself</p>
+                <a href="test.html" class="btn">Give Test</a>
                 <p></p>
             </div>
         </div>
@@ -110,6 +183,71 @@
                     <p>Web Design</p>
                     <p class="price">Free</p>
                 </div>
+
+                <div class="courses-section">
+                    <h1>Programming Langauges</h1>
+                    <div class="courses-container">
+                <!-- Course Card 4 -->
+                <div class="course-card">
+                    <img src="img/coursecpp.jpg" alt="Bootstrap Course">
+                    <h3>Learn C++</h3>
+                    <p>Programming</p>
+                    <p class="price">Free</p>
+                </div>
+                <!-- Course Card 4 -->
+                <div class="course-card">
+                    <img src="img/coursepy.jpg" alt="Bootstrap Course">
+                    <h3>Basic Python</h3>
+                    <p>Programming</p>
+                    <p class="price">Free</p>
+                </div>
+                <!-- Course Card 4 -->
+                <div class="course-card">
+                    <img src="img/coursejava.jpg" alt="Bootstrap Course">
+                    <h3>Basic Java</h3>
+                    <p>Programming</p>
+                    <p class="price">Free</p>
+                </div>
+                <!-- Course Card 4 -->
+                <div class="course-card">
+                    <img src="img/coursec.jpg" alt="Bootstrap Course">
+                    <h3>C# Tutorial</h3>
+                    <p>Programming</p>
+                    <p class="price">Free</p>
+                </div>
+
+                <div class="courses-section">
+                    <h1>Server Side </h1>
+                    <div class="courses-container">
+                <!-- Course Card 4 -->
+                <div class="course-card">
+                    <img src="img/coursesql.jpg" alt="Bootstrap Course">
+                    <h3>SQL Tutorial</h3>
+                    <p>Server Side</p>
+                    <p class="price">Free</p>
+                </div>
+                <!-- Course Card 4 -->
+                <div class="course-card">
+                    <img src="img/coursend.jpg" alt="Bootstrap Course">
+                    <h3> Node.js </h3>
+                    <p>Server Side</p>
+                    <p class="price">Free</p>
+                </div>
+                <!-- Course Card 4 -->
+                <div class="course-card">
+                    <img src="img/coursegit.jpg" alt="Bootstrap Course">
+                    <h3>Mastering in Git</h3>
+                    <p>Server Side</p>
+                    <p class="price">Free</p>
+                </div>
+                <!-- Course Card 4 -->
+                <div class="course-card">
+                    <img src="img/course05.jpg" alt="Bootstrap Course">
+                    <h3>PHP</h3>
+                    <p>Server Side</p>
+                    <p class="price">Free</p>
+                </div>
+
             </div>
             
         </div>
@@ -150,6 +288,33 @@
                 </div>
             </div>
         </nav>
-    
+        <script>
+            
+            function toggleChat() {
+                var chatbox = document.getElementById("chatbox");
+                if (chatbox.style.display === "none" || chatbox.style.display === "") {
+                    chatbox.style.display = "block";
+                } else {
+                    chatbox.style.display = "none";
+                }
+            }
+            function sendMessage() {
+                var inputField = document.getElementById("user-input");
+                var message = inputField.value;
+                if (message.trim() !== "") {
+                    var chatBody = document.getElementById("chat-body");
+                    var userMessage = `<div><strong>You:</strong> ${message}</div>`;
+                    chatBody.innerHTML += userMessage;
+                    inputField.value = "";
+                    chatBody.scrollTop = chatBody.scrollHeight;
+                    
+                    setTimeout(() => {
+                        var botMessage = `<div><strong>Bot:</strong> Hello! How can I help you?</div>`;
+                        chatBody.innerHTML += botMessage;
+                        chatBody.scrollTop = chatBody.scrollHeight;
+                    }, 1000);
+                }
+            }
+        </script>
 </body>
 </html>
